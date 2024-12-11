@@ -33,8 +33,6 @@ public class StudentController {
             @ApiResponse(responseCode = "404", description = "not found"),
             @ApiResponse(responseCode = "500", description = "Internal error")
     })
-
-
     @GetMapping("/getStudentSchoolDetails")
     public ResponseEntity<List<Student>> getStudentSchool() {
         List<Student> studentList = new ArrayList<>();
