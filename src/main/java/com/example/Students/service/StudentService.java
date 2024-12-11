@@ -16,13 +16,14 @@ public class StudentService {
     @Autowired
     private StudentRepo studentRepo;
     static List<Student> studentList = new ArrayList<>();
+
     @Transactional
     @PostConstruct
     void populateList() {
-        studentList.add(new Student(1L, "Ayushi", "DPS"));
-        studentList.add(new Student(2L, "Ayush", "DAV"));
-        studentList.add(new Student(3L, "Ayu", "KV"));
-        studentList.add(new Student(4L, "shivi", "Prabhat"));
+        studentList.add(new Student( "Ayushi", "DPS"));
+        studentList.add(new Student( "Ayush", "DAV"));
+        studentList.add(new Student( "Ayu", "KV"));
+        studentList.add(new Student( "shivi", "Prabhat"));
         studentRepo.saveAll(studentList);
     }
 

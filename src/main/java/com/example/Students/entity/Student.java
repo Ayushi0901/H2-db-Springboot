@@ -21,19 +21,17 @@ import lombok.ToString;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public long id;
     public String name;
     public String schoolName;
 
-    public Student(long id, String name, String schoolName) {
-        this.id = id;
+    public Student( String name, String schoolName) {
         this.name = name;
         this.schoolName = schoolName;
     }
 
     public Student() {
-
     }
 
     public long getId() {
